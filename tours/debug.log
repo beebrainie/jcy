@@ -1,0 +1,13 @@
+Array
+(
+    [group_id] => 4
+    [tour_name] => angkor-archaeological-site-phnom-penh-casino
+    [tour_date] => 2025-08-17
+    [adults] => 11
+    [child12] => 0
+    [child75] => 0
+    [child50] => 0
+    [child0] => 0
+    [total_price] => 4763
+    [image] => ../assets/img/Angkorwat/temple.jpg
+)
