@@ -6,31 +6,52 @@ $currentPage = basename($_SERVER['PHP_SELF']);
 
 <head>
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>JCY Tours | Explore Cambodia with Trusted Tour Experts</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JCY Tours | Explore Cambodia with Trusted Local Experts</title>
+    <meta name="description" content="Discover unforgettable tours in Cambodia with JCY Tours. Book trusted local adventures, tailored packages, and explore stunning destinations.">
+    <meta name="keywords" content="Cambodia Tours, JCY Travel, Phnom Penh, Siem Reap, Angkor Wat, Local Tour Packages, Travel Cambodia">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="JCY Tours">
+
+    <!-- Open Graph Meta -->
+    <meta property="og:title" content="JCY Tours | Explore Cambodia">
+    <meta property="og:description" content="Explore Cambodia with trusted tour packages and expert guides.">
+    <meta property="og:image" content="https://yourdomain.com/assets/img/JCY-Logo.png">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Meta -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="JCY Tours | Explore Cambodia">
+    <meta name="twitter:description" content="Plan your next trip with expert local tours in Cambodia.">
+    <meta name="twitter:image" content="https://yourdomain.com/assets/img/JCY-Logo.png">
 
     <!-- Favicons -->
-    <link href="assets/img/JCY-Logo.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link rel="icon" href="assets/img/JCY-Logo.png">
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Preconnect & Preload Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@400;500;600;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet" media="all">
 
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <!-- Vendor CSS (Consider minifying or combining if self-hosted) -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/vendor/aos/aos.css">
+    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/vendor/glightbox/css/glightbox.min.css">
 
-    <!-- Main CSS File -->
-    <link href="assets/css/main.css" rel="stylesheet">
+    <!-- Font Awesome from CDN (Use only if needed) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-yf...snipped..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Main CSS (minified version preferred) -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="preload" href="assets/fonts/your-font.woff2" as="font" type="font/woff2" crossorigin>
 
 </head>
+
 
 <body class="index-page">
 
@@ -70,6 +91,13 @@ $currentPage = basename($_SERVER['PHP_SELF']);
                             <li><a href="/zh/"><img src="assets/img/lang/Flag_of_China.png" alt="中文" width="20" style="margin-right: 8px;">中文 (繁體)</a></li>
                         </ul>
                     </li>
+                    <li>
+                        <a href="tours/my-booking.php" title="Your Dashboard" class="<?= $currentPage == 'tours/my-booking.php' ? 'active' : '' ?>" style="display: flex; align-items: center;">
+                            <i class="fas fa-user-circle" style="font-size: 25px;"></i>
+                        </a>
+                    </li>
+
+
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
 

@@ -290,7 +290,7 @@ include '../partials/__subhero.php';
     .regform-submit-btn {
       width: 100%;
       padding: 13px;
-      background: linear-gradient(90deg, #6c63ff, #574bff);
+      background: linear-gradient(90deg, #5896ed, #3880f1);
       color: #fff;
       font-size: 16px;
       border: none;
@@ -302,7 +302,7 @@ include '../partials/__subhero.php';
     }
 
     .regform-submit-btn:hover {
-      background: linear-gradient(90deg, #574bff, #6c63ff);
+      background: linear-gradient(90deg, #3880f1, #5896ed);
     }
 
     .regform-social-login {

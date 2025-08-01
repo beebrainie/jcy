@@ -445,298 +445,298 @@ include '../partials/__subhero.php';
             </div>
           `;
 
-                  // Add to body
-                  document.body.appendChild(toast);
+          // Add to body
+          document.body.appendChild(toast);
 
-                  // Show toast with animation
-                  setTimeout(() => {
-                    toast.classList.add('toast-show');
-                  }, 100);
+          // Show toast with animation
+          setTimeout(() => {
+            toast.classList.add('toast-show');
+          }, 100);
 
-                  // Auto hide after duration
-                  setTimeout(() => {
-                    toast.classList.remove('toast-show');
-                    setTimeout(() => {
-                      if (toast.parentNode) {
-                        toast.remove();
-                      }
-                    }, 300);
-                  }, duration);
+          // Auto hide after duration
+          setTimeout(() => {
+            toast.classList.remove('toast-show');
+            setTimeout(() => {
+              if (toast.parentNode) {
+                toast.remove();
+              }
+            }, 300);
+          }, duration);
+        }
+
+        // Popup Alert Functions (keep existing)
+        function showPopupAlert(message, type = 'warning', title = null) {
+          const popup = document.getElementById('popupAlert');
+          const icon = document.getElementById('popupAlertIcon');
+          const titleEl = document.getElementById('popupAlertTitle');
+          const messageEl = document.getElementById('popupAlertMessage');
+          const button = document.getElementById('popupAlertButton');
+
+          // Set content
+          messageEl.textContent = message;
+
+          // Set type-specific styling
+          if (type === 'error') {
+            icon.textContent = '❌';
+            icon.className = 'popup-alert-icon error';
+            titleEl.textContent = title || 'Error';
+            button.className = 'popup-alert-button error';
+          } else if (type === 'warning') {
+            icon.textContent = '⚠️';
+            icon.className = 'popup-alert-icon warning';
+            titleEl.textContent = title || 'Warning';
+            button.className = 'popup-alert-button warning';
+          } else {
+            icon.textContent = 'ℹ️';
+            icon.className = 'popup-alert-icon';
+            titleEl.textContent = title || 'Information';
+            button.className = 'popup-alert-button';
+          }
+
+          popup.style.display = 'flex';
+        }
+
+        function closePopupAlert() {
+          document.getElementById('popupAlert').style.display = 'none';
+        }
+
+        // Close popup when clicking outside
+        document.addEventListener('click', function(event) {
+          const popup = document.getElementById('popupAlert');
+          if (event.target === popup) {
+            closePopupAlert();
+          }
+        });
+
+        const tourInfo = {
+          tour_id: <?= json_encode($tour_id) ?>,
+          tour_name: <?= json_encode($tour_name) ?>
+        };
+
+        const groupLimits = <?= json_encode($groupLimitsJS) ?>;
+
+        window.addEventListener('DOMContentLoaded', function() {
+          let currentGroupId = null;
+          let currentGroupKey = null;
+
+          const getQty = type => parseInt(document.getElementById(`pkg-${type}-qty`).innerText) || 0;
+          const setQty = (type, val) => document.getElementById(`pkg-${type}-qty`).innerText = val;
+
+          const totalPeople = () => ['adult', 'child12', 'child75', 'child50', 'child0']
+            .reduce((sum, t) => sum + getQty(t), 0);
+
+          const updateButtonStates = () => {
+            if (!currentGroupKey) return;
+            const limits = groupLimits[currentGroupKey];
+            const adult = getQty("adult");
+            const total = totalPeople();
+            const max = limits.maxTotal;
+
+            const disableAdd = (id, condition) =>
+              document.querySelector(`#pkg-${id}-qty`).parentElement.querySelectorAll("button")[1].disabled = condition;
+            const disableSub = (id, condition) =>
+              document.querySelector(`#pkg-${id}-qty`).parentElement.querySelectorAll("button")[0].disabled = condition;
+
+            disableSub("adult", adult <= limits.minAdults);
+            disableAdd("adult", total >= max);
+
+            ["child12", "child75", "child50", "child0"].forEach(type => {
+              const current = getQty(type);
+              disableSub(type, current <= 0);
+              disableAdd(type, total >= max);
+            });
+          };
+
+          window.pkgUI = {
+            currentGroupId,
+            currentGroupKey,
+
+            selectGroup(pricingId, groupKey, price) {
+              this.currentGroupId = pricingId;
+              this.currentGroupKey = groupKey;
+              currentGroupId = pricingId;
+              currentGroupKey = groupKey;
+
+              document.getElementById("pkg-group-step").classList.add("pkg-hidden");
+              const form = document.getElementById("pkg-form-step");
+              form.classList.remove("pkg-hidden");
+              form.classList.add("pkg-fade-in");
+
+              const group = groupLimits[groupKey];
+
+              setQty("adult", group.minAdults);
+              ["child12", "child75", "child50", "child0"].forEach(t => setQty(t, 0));
+              document.getElementById("pkg-adult-price-label").innerText = `$${price.toFixed(2)}`;
+
+              this.updateTotal();
+              updateButtonStates();
+            },
+
+            updateQty(type, delta) {
+              if (!this.currentGroupKey) return;
+
+              const limits = groupLimits[this.currentGroupKey];
+              const max = limits.maxTotal;
+              const minAdults = limits.minAdults;
+              const currentQty = getQty(type);
+              const total = totalPeople();
+              const newTotal = total + delta;
+
+              // Check if trying to add more when at max limit
+              if (delta > 0 && total >= max) {
+                showToast(`Maximum ${max} people allowed for this group size`, 'warning', 4000);
+                return;
+              }
+
+              if (type === "adult") {
+                const newVal = currentQty + delta;
+
+                // Check if trying to reduce below minimum adults
+                if (delta < 0 && newVal < minAdults) {
+                  showToast(`Minimum ${minAdults} adults required for this group size`, 'warning', 4000);
+                  return;
                 }
 
-                // Popup Alert Functions (keep existing)
-                function showPopupAlert(message, type = 'warning', title = null) {
-                  const popup = document.getElementById('popupAlert');
-                  const icon = document.getElementById('popupAlertIcon');
-                  const titleEl = document.getElementById('popupAlertTitle');
-                  const messageEl = document.getElementById('popupAlertMessage');
-                  const button = document.getElementById('popupAlertButton');
+                if (newVal < minAdults || newTotal > max || newVal < 0) return;
+                setQty(type, newVal);
+              } else {
+                const newVal = currentQty + delta;
+                if (newVal < 0 || newTotal > max) return;
+                setQty(type, newVal);
+              }
 
-                  // Set content
-                  messageEl.textContent = message;
+              this.updateTotal();
+              updateButtonStates();
+            },
 
-                  // Set type-specific styling
-                  if (type === 'error') {
-                    icon.textContent = '❌';
-                    icon.className = 'popup-alert-icon error';
-                    titleEl.textContent = title || 'Error';
-                    button.className = 'popup-alert-button error';
-                  } else if (type === 'warning') {
-                    icon.textContent = '⚠️';
-                    icon.className = 'popup-alert-icon warning';
-                    titleEl.textContent = title || 'Warning';
-                    button.className = 'popup-alert-button warning';
-                  } else {
-                    icon.textContent = 'ℹ️';
-                    icon.className = 'popup-alert-icon';
-                    titleEl.textContent = title || 'Information';
-                    button.className = 'popup-alert-button';
-                  }
+            updateTotal() {
+              if (!this.currentGroupKey) return;
 
-                  popup.style.display = 'flex';
-                }
+              const group = groupLimits[this.currentGroupKey];
+              const base = group.price;
 
-                function closePopupAlert() {
-                  document.getElementById('popupAlert').style.display = 'none';
-                }
+              const adult = getQty("adult");
+              const c12 = getQty("child12");
+              const c75 = getQty("child75");
+              const c50 = getQty("child50");
 
-                // Close popup when clicking outside
-                document.addEventListener('click', function(event) {
-                  const popup = document.getElementById('popupAlert');
-                  if (event.target === popup) {
-                    closePopupAlert();
-                  }
-                });
+              const total =
+                (adult + c12) * base +
+                c75 * base * 0.75 +
+                c50 * base * 0.5;
 
-                const tourInfo = {
-                  tour_id: <?= json_encode($tour_id) ?>,
-                  tour_name: <?= json_encode($tour_name) ?>
-                };
+              document.getElementById("pkg-total-price").innerText = total.toFixed(2);
+            }
+          };
 
-                const groupLimits = <?= json_encode($groupLimitsJS) ?>;
+          function showAddToCartPopup() {
+            const popup = document.getElementById('addToCartSuccessPopup');
+            if (!popup) return;
+            popup.style.display = 'block';
+            setTimeout(() => {
+              popup.style.display = 'none';
+            }, 3000);
+          }
 
-                window.addEventListener('DOMContentLoaded', function() {
-                  let currentGroupId = null;
-                  let currentGroupKey = null;
+          function saveBookingData(postData) {
+            // Store booking data including tour_id
+            localStorage.setItem('bookingData', JSON.stringify(postData));
+          }
 
-                  const getQty = type => parseInt(document.getElementById(`pkg-${type}-qty`).innerText) || 0;
-                  const setQty = (type, val) => document.getElementById(`pkg-${type}-qty`).innerText = val;
+          // Add to Cart button
+          document.getElementById('addToCartBtn').addEventListener('click', async function() {
+            if (!pkgUI.currentGroupId || !pkgUI.currentGroupKey) {
+              showPopupAlert('Please select a group size first.', 'warning', 'Selection Required');
+              return;
+            }
 
-                  const totalPeople = () => ['adult', 'child12', 'child75', 'child50', 'child0']
-                    .reduce((sum, t) => sum + getQty(t), 0);
+            const tourDate = document.getElementById('pkg-tour-date').value;
+            if (!tourDate) {
+              showPopupAlert('Please select a tour date.', 'warning', 'Date Required');
+              return;
+            }
 
-                  const updateButtonStates = () => {
-                    if (!currentGroupKey) return;
-                    const limits = groupLimits[currentGroupKey];
-                    const adult = getQty("adult");
-                    const total = totalPeople();
-                    const max = limits.maxTotal;
+            const adults = getQty('adult');
+            const child12 = getQty('child12');
+            const child75 = getQty('child75');
+            const child50 = getQty('child50');
+            const child0 = getQty('child0');
+            const totalPrice = parseFloat(document.getElementById('pkg-total-price').innerText) || 0;
 
-                    const disableAdd = (id, condition) =>
-                      document.querySelector(`#pkg-${id}-qty`).parentElement.querySelectorAll("button")[1].disabled = condition;
-                    const disableSub = (id, condition) =>
-                      document.querySelector(`#pkg-${id}-qty`).parentElement.querySelectorAll("button")[0].disabled = condition;
+            const postData = {
+              group_id: pkgUI.currentGroupId,
+              group_key: pkgUI.currentGroupKey,
+              tour_date: tourDate,
+              adults: adults,
+              child12: child12,
+              child75: child75,
+              child50: child50,
+              child0: child0,
+              total_price: totalPrice,
+              image: '../assets/img/Angkorwat/temple.jpg',
+              tour_id: tourInfo.tour_id // store tour_id here
+            };
 
-                    disableSub("adult", adult <= limits.minAdults);
-                    disableAdd("adult", total >= max);
+            saveBookingData(postData);
 
-                    ["child12", "child75", "child50", "child0"].forEach(type => {
-                      const current = getQty(type);
-                      disableSub(type, current <= 0);
-                      disableAdd(type, total >= max);
-                    });
-                  };
+            try {
+              const response = await fetch('add-to-cart.php', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(postData),
+              });
 
-                  window.pkgUI = {
-                    currentGroupId,
-                    currentGroupKey,
+              const data = await response.json();
 
-                    selectGroup(pricingId, groupKey, price) {
-                      this.currentGroupId = pricingId;
-                      this.currentGroupKey = groupKey;
-                      currentGroupId = pricingId;
-                      currentGroupKey = groupKey;
+              if (data.status === 'success') {
+                showAddToCartPopup();
+              } else {
+                showPopupAlert('Error adding to cart: ' + (data.message || 'Unknown error'), 'error', 'Cart Error');
+              }
+            } catch (error) {
+              console.error('Add to cart error:', error);
+              showPopupAlert('Failed to add to cart. Please try again.', 'error', 'Network Error');
+            }
+          });
 
-                      document.getElementById("pkg-group-step").classList.add("pkg-hidden");
-                      const form = document.getElementById("pkg-form-step");
-                      form.classList.remove("pkg-hidden");
-                      form.classList.add("pkg-fade-in");
+          // Book Now button
+          document.getElementById('bookNowBtn').addEventListener('click', function() {
+            if (!pkgUI.currentGroupId || !pkgUI.currentGroupKey) {
+              showPopupAlert('Please select a group size first.', 'warning', 'Selection Required');
+              return;
+            }
 
-                      const group = groupLimits[groupKey];
+            const tourDate = document.getElementById('pkg-tour-date').value;
+            if (!tourDate) {
+              showPopupAlert('Please select a tour date.', 'warning', 'Date Required');
+              return;
+            }
 
-                      setQty("adult", group.minAdults);
-                      ["child12", "child75", "child50", "child0"].forEach(t => setQty(t, 0));
-                      document.getElementById("pkg-adult-price-label").innerText = `$${price.toFixed(2)}`;
+            const postData = {
+              group_id: pkgUI.currentGroupId,
+              group_key: pkgUI.currentGroupKey,
+              tour_date: tourDate,
+              adults: getQty('adult'),
+              child12: getQty('child12'),
+              child75: getQty('child75'),
+              child50: getQty('child50'),
+              child0: getQty('child0'),
+              total_price: parseFloat(document.getElementById('pkg-total-price').innerText),
+              image: '../assets/img/Angkorwat/temple.jpg',
+              tour_id: tourInfo.tour_id // store tour_id here too
+            };
 
-                      this.updateTotal();
-                      updateButtonStates();
-                    },
+            saveBookingData(postData);
 
-                    updateQty(type, delta) {
-                      if (!this.currentGroupKey) return;
+            // Set flag for next booking page if needed
+            localStorage.setItem('nextBookingPage', 'package');
 
-                      const limits = groupLimits[this.currentGroupKey];
-                      const max = limits.maxTotal;
-                      const minAdults = limits.minAdults;
-                      const currentQty = getQty(type);
-                      const total = totalPeople();
-                      const newTotal = total + delta;
-
-                      // Check if trying to add more when at max limit
-                      if (delta > 0 && total >= max) {
-                        showToast(`Maximum ${max} people allowed for this group size`, 'warning', 4000);
-                        return;
-                      }
-
-                      if (type === "adult") {
-                        const newVal = currentQty + delta;
-
-                        // Check if trying to reduce below minimum adults
-                        if (delta < 0 && newVal < minAdults) {
-                          showToast(`Minimum ${minAdults} adults required for this group size`, 'warning', 4000);
-                          return;
-                        }
-
-                        if (newVal < minAdults || newTotal > max || newVal < 0) return;
-                        setQty(type, newVal);
-                      } else {
-                        const newVal = currentQty + delta;
-                        if (newVal < 0 || newTotal > max) return;
-                        setQty(type, newVal);
-                      }
-
-                      this.updateTotal();
-                      updateButtonStates();
-                    },
-
-                    updateTotal() {
-                      if (!this.currentGroupKey) return;
-
-                      const group = groupLimits[this.currentGroupKey];
-                      const base = group.price;
-
-                      const adult = getQty("adult");
-                      const c12 = getQty("child12");
-                      const c75 = getQty("child75");
-                      const c50 = getQty("child50");
-
-                      const total =
-                        (adult + c12) * base +
-                        c75 * base * 0.75 +
-                        c50 * base * 0.5;
-
-                      document.getElementById("pkg-total-price").innerText = total.toFixed(2);
-                    }
-                  };
-
-                  function showAddToCartPopup() {
-                    const popup = document.getElementById('addToCartSuccessPopup');
-                    if (!popup) return;
-                    popup.style.display = 'block';
-                    setTimeout(() => {
-                      popup.style.display = 'none';
-                    }, 3000);
-                  }
-
-                  function saveBookingData(postData) {
-                    // Store booking data including tour_id
-                    localStorage.setItem('bookingData', JSON.stringify(postData));
-                  }
-
-                  // Add to Cart button
-                  document.getElementById('addToCartBtn').addEventListener('click', async function() {
-                    if (!pkgUI.currentGroupId || !pkgUI.currentGroupKey) {
-                      showPopupAlert('Please select a group size first.', 'warning', 'Selection Required');
-                      return;
-                    }
-
-                    const tourDate = document.getElementById('pkg-tour-date').value;
-                    if (!tourDate) {
-                      showPopupAlert('Please select a tour date.', 'warning', 'Date Required');
-                      return;
-                    }
-
-                    const adults = getQty('adult');
-                    const child12 = getQty('child12');
-                    const child75 = getQty('child75');
-                    const child50 = getQty('child50');
-                    const child0 = getQty('child0');
-                    const totalPrice = parseFloat(document.getElementById('pkg-total-price').innerText) || 0;
-
-                    const postData = {
-                      group_id: pkgUI.currentGroupId,
-                      group_key: pkgUI.currentGroupKey,
-                      tour_date: tourDate,
-                      adults: adults,
-                      child12: child12,
-                      child75: child75,
-                      child50: child50,
-                      child0: child0,
-                      total_price: totalPrice,
-                      image: '../assets/img/Angkorwat/temple.jpg',
-                      tour_id: tourInfo.tour_id // store tour_id here
-                    };
-
-                    saveBookingData(postData);
-
-                    try {
-                      const response = await fetch('add-to-cart.php', {
-                        method: 'POST',
-                        headers: {
-                          'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify(postData),
-                      });
-
-                      const data = await response.json();
-
-                      if (data.status === 'success') {
-                        showAddToCartPopup();
-                      } else {
-                        showPopupAlert('Error adding to cart: ' + (data.message || 'Unknown error'), 'error', 'Cart Error');
-                      }
-                    } catch (error) {
-                      console.error('Add to cart error:', error);
-                      showPopupAlert('Failed to add to cart. Please try again.', 'error', 'Network Error');
-                    }
-                  });
-
-                  // Book Now button
-                  document.getElementById('bookNowBtn').addEventListener('click', function() {
-                    if (!pkgUI.currentGroupId || !pkgUI.currentGroupKey) {
-                      showPopupAlert('Please select a group size first.', 'warning', 'Selection Required');
-                      return;
-                    }
-
-                    const tourDate = document.getElementById('pkg-tour-date').value;
-                    if (!tourDate) {
-                      showPopupAlert('Please select a tour date.', 'warning', 'Date Required');
-                      return;
-                    }
-
-                    const postData = {
-                      group_id: pkgUI.currentGroupId,
-                      group_key: pkgUI.currentGroupKey,
-                      tour_date: tourDate,
-                      adults: getQty('adult'),
-                      child12: getQty('child12'),
-                      child75: getQty('child75'),
-                      child50: getQty('child50'),
-                      child0: getQty('child0'),
-                      total_price: parseFloat(document.getElementById('pkg-total-price').innerText),
-                      image: '../assets/img/Angkorwat/temple.jpg',
-                      tour_id: tourInfo.tour_id // store tour_id here too
-                    };
-
-                    saveBookingData(postData);
-
-                    // Set flag for next booking page if needed
-                    localStorage.setItem('nextBookingPage', 'package');
-
-                    // Redirect to signup or next step
-                    window.location.href = 'signup.php';
-                  });
-                });
+            // Redirect to signup or next step
+            window.location.href = 'signup.php';
+          });
+        });
       </script>
 
 
@@ -745,33 +745,44 @@ include '../partials/__subhero.php';
         <h2>Photo Gallery</h2>
         <div class="gallery-grid">
           <div class="gallery-item">
-            <a href="../assets/img/travel/destination-1.webp" class="glightbox">
-              <img src="../assets/img/travel/destination-1.webp" alt="Venice Canals" class="img-fluid" loading="lazy">
+            <a href="../assets/img/Angkorwat/couple.webp" class="glightbox">
+              <img src="../assets/img/Angkorwat/couple.webp" alt="Venice Canals" class="img-fluid" loading="lazy">
             </a>
           </div>
           <div class="gallery-item">
-            <a href="../assets/img/travel/destination-2.webp" class="glightbox">
-              <img src="../assets/img/travel/destination-2.webp" alt="Florence Cathedral" class="img-fluid" loading="lazy">
+            <a href="../assets/img/Bayon Temple,/ancient-khmer-architecture-amazing-view-bayon-temple-sunset-angkor-wat-complex_558469-4830.avif" class="glightbox">
+              <img src="../assets/img/Bayon Temple,/ancient-khmer-architecture-amazing-view-bayon-temple-sunset-angkor-wat-complex_558469-4830.avif" alt="Florence Cathedral" class="img-fluid" loading="lazy">
             </a>
           </div>
           <div class="gallery-item">
-            <a href="../assets/img/travel/destination-3.webp" class="glightbox">
-              <img src="../assets/img/travel/destination-3.webp" alt="Roman Colosseum" class="img-fluid" loading="lazy">
+            <a href="../assets/img//Angkorwat/phimeanahkas.jpg" class="glightbox">
+              <img src="../assets/img/Angkorwat/phimeanahkas.jpg" alt="Roman Colosseum" class="img-fluid" loading="lazy">
             </a>
           </div>
           <div class="gallery-item">
-            <a href="../assets/img/travel/destination-4.webp" class="glightbox">
-              <img src="../assets/img/travel/destination-4.webp" alt="Santorini Sunset" class="img-fluid" loading="lazy">
+            <a href="../assets/img/Angkorwat/Terrace of the elephant.jpg" class="glightbox">
+              <img src="../assets/img/Angkorwat/Terrace of the elephant.jpg" alt="Santorini Sunset" class="img-fluid" loading="lazy">
             </a>
           </div>
           <div class="gallery-item">
-            <a href="../assets/img/travel/destination-5.webp" class="glightbox">
-              <img src="../assets/img/travel/destination-5.webp" alt="Hagia Sophia" class="img-fluid" loading="lazy">
+            <a href="../assets/img/phnom-bakheng/5caac579a6cd7c1974870ddd12a0bc55.jpg" class="glightbox">
+              <img src="../assets/img/phnom-bakheng/5caac579a6cd7c1974870ddd12a0bc55.jpg" alt="Hagia Sophia" class="img-fluid" loading="lazy">
             </a>
           </div>
           <div class="gallery-item">
-            <a href="../assets/img/travel/destination-6.webp" class="glightbox">
-              <img src="../assets/img/travel/destination-6.webp" alt="Mediterranean Cuisine" class="img-fluid" loading="lazy">
+            <a href="../assets/img/phnom-bakheng/8a47b28bb47b8e54e24aa6f30f27e181.jpg" class="glightbox">
+              <img src="../assets/img/phnom-bakheng/8a47b28bb47b8e54e24aa6f30f27e181.jpg" alt="Mediterranean Cuisine" class="img-fluid" loading="lazy">
+            </a>
+          </div>
+
+          <div class="gallery-item">
+            <a href="../assets/img/floating village/Kampng Phluk.jpg" class="glightbox">
+              <img src="../assets/img/floating village/Kampng Phluk.jpg" alt="Mediterranean Cuisine" class="img-fluid" loading="lazy">
+            </a>
+          </div>
+          <div class="gallery-item">
+            <a href="../assets/img/floating village/309213_67f748f24639c.jpg" class="glightbox">
+              <img src="../assets/img/floating village/309213_67f748f24639c.jpg" alt="Mediterranean Cuisine" class="img-fluid" loading="lazy">
             </a>
           </div>
         </div>
@@ -783,13 +794,13 @@ include '../partials/__subhero.php';
           <h2>Ready for Your Mediterranean Adventure?</h2>
           <p>Limited spots available for 2024 departures. Book now to secure your place on this incredible journey.</p>
           <div class="cta-actions">
-            <a href="../booking.php" class="btn-primary">Book Now</a>
-            <a href="tel:+1-555-123-4567" class="btn-secondary">Call Us: +1 (555) 123-4567</a>
+            <a href="#" class="btn-primary">Book Now</a>
+            <a href="tel:+1-555-123-4567" class="btn-secondary">Call Us: (+855) 97 559 0178</a>
           </div>
-          <div class="urgency-banner">
+          <!-- <div class="urgency-banner">
             <i class="bi bi-clock"></i>
             <span>Next departure in 45 days - Only 6 spots remaining!</span>
-          </div>
+          </div> -->
         </div>
       </div>
 
@@ -963,7 +974,7 @@ include '../partials/__subhero.php';
       transform: translateY(0);
     }
   </style>
-  
+
 
 
   <style>

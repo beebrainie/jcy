@@ -17,53 +17,57 @@ include '../partials/__subhero.php';
               <h1>Siem Reap - Battambang – Angkor Wat – Phnom Sampov – Bamboo Train – 5Days</h1>
               <div class="hero-meta">
                 <span class="duration"><i class="bi bi-calendar"></i> 5 Days</span>
-                <span class="destination"><i class="bi bi-geo-alt"></i> Siem Reap & Battambang</span>
+                <span class="destination"><i class="bi bi-geo-alt"></i> Phnom Penh, Siem Reap &amp; Battambang</span>
                 <span class="rating"><i class="bi bi-star-fill"></i> 4.8 (124 reviews)</span>
-              </div>
-              <p class="hero-tagline">Experience Cambodia's ancient wonders and natural beauty—from the magnificent temples of Angkor Wat to the sacred caves of Phnom Sampov and the unique adventure of the famous Bamboo Train through Battambang's countryside.</p>
+              </div>_
+              <p class="hero-tagline">
+                Experience the best of Cambodia in 5 unforgettable days—explore the majestic Angkor Wat, ride the iconic Bamboo Train in Battambang, and witness panoramic views from Phnom Sampov. A perfect blend of ancient wonders, cultural heritage, and scenic beauty.
+              </p>
+
 
               <a href="#booking" class="btn-book">Check Availability</a>
             </div>
           </div>
         </div>
       </div>
-      <!--Gallery Blog -->
+      <!--Gallery & Highlight Blog  -->
       <div class="tour-overview gallery-blog" data-aos="fade-up" data-aos-delay="200">
         <div class="row">
           <!-- Left: Gallery Blog -->
           <div class="col-lg-8">
             <h2>Gallery Blog</h2>
 
+
             <div class="row g-2 mt-3">
               <div class="col-md-4">
                 <div class="hover-card">
-                  <img src="../assets/img/Angkorwat/0eb4082e2b37e7cc1c9eb4c477445e0d.jpg" alt="Angkor Wat">
+                  <img src="../assets/img/Angkorwat/ankrain.jpg" alt="Angkor Wat">
                   <div class="hover-overlay">
                     <div class="hover-text">
                       <h5 class="text-light">Angkor Wat Temple</h5>
-                      <small>Discover the majestic ancient temple of Angkor Wat, a UNESCO heritage site.</small>
+                      <small>Marvel at the world’s largest religious monument, an icon of Cambodian heritage.</small>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="hover-card">
-                  <img src="../assets/img/tole sap/3.jpg" alt="Tonle Sap Lake">
+                  <img src="../assets/img/Bayon Temple,/bayon.jpg" alt="Bayon Temple">
                   <div class="hover-overlay">
                     <div class="hover-text">
-                      <h5 class="text-light">Tonle Sap Lake</h5>
-                      <small>Experience Cambodia's largest freshwater lake and vibrant floating villages.</small>
+                      <h5 class="text-light">Bayon & Angkor Thom</h5>
+                      <small>Explore the serene faces of Bayon Temple and the grandeur of Angkor Thom city.</small>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="hover-card">
-                  <img src="../assets/img/koh ker/f0d92c4178e16494b3b4c4568d3feb8f.jpg" alt="More Adventures">
+                  <img src="../assets/img/bamboo/bamboo-train-of-battambang.jpg" alt="Bamboo Train Battambang">
                   <div class="hover-overlay">
                     <div class="hover-text mb-2">
-                      <h5 class="text-light">More Adventures</h5>
-                      <small>Uncover more stunning locations and unforgettable moments in Cambodia.</small>
+                      <h5 class="text-light">Bamboo Train Ride</h5>
+                      <small>Enjoy a scenic and fun ride through Battambang’s lush countryside on the unique bamboo train.</small>
                     </div>
                     <a href="../gallery.php" class="btn btn-primary btn-sm">View More</a>
                   </div>
@@ -72,21 +76,22 @@ include '../partials/__subhero.php';
             </div>
           </div>
 
+
           <!-- Right: Highlights -->
           <div class="col-lg-4">
             <div class="tour-highlights">
               <h3>Tour Highlights</h3>
               <ul>
-                <li><i class="bi bi-check-circle"></i> Explore Angkor Wat, Bayon, Ta Prohm & more</li>
-                <li><i class="bi bi-check-circle"></i> Sunset views from Phnom Bakheng</li>
-                <li><i class="bi bi-check-circle"></i> Experience the unique Bamboo Train ride</li>
-                <li><i class="bi bi-check-circle"></i> Discover Phnom Sampov caves & bat watching</li>
-                <li><i class="bi bi-check-circle"></i> Visit Ek Phnom ancient temple & Silk Farm</li>
-                <li><i class="bi bi-check-circle"></i> Comfortable 3-star hotels & A/C transport</li>
-                <li><i class="bi bi-check-circle"></i> Local guides, free water & towels daily</li>
+                <li><i class="bi bi-check-circle"></i> Discover Angkor Wat, Bayon, Ta Prohm & Baphuon temples</li>
+                <li><i class="bi bi-check-circle"></i> Enjoy stunning sunset from Phnom Bakheng hilltop</li>
+                <li><i class="bi bi-check-circle"></i> Ride the iconic Bamboo Train through Battambang countryside</li>
+                <li><i class="bi bi-check-circle"></i> Visit Ek Phnom temple & Sampov Mountain’s bat cave</li>
+                <li><i class="bi bi-check-circle"></i> Learn traditional silk weaving at Angkor Silk Farm</li>
+                <li><i class="bi bi-check-circle"></i> Experience Khmer culture, local villages & ancient houses</li>
               </ul>
             </div>
           </div>
+
         </div>
       </div>
       <!-- Itinerary -->
@@ -97,15 +102,17 @@ include '../partials/__subhero.php';
           <div class="itinerary-item">
             <div class="day-number">Day 1</div>
             <div class="day-content">
-              <h4>Arrive Siem Reap Angkor International Airport</h4>
+              <h4>Arrival in Phnom Penh – Transfer to Siem Reap</h4>
               <ul>
-                <li>Arrival at Siem Reap Angkor International Airport</li>
-                <li>Meet and greeted by our English-speaking tour guide and transfer to the hotel in Siem Reap</li>
-                <li>Free time for leisure, enjoy the nightlife at Pub Street is the hub of activity when night falls in Siem Reap</li>
+                <li> Arrival at Phnom Penh, Techo International Airport </li>
+                <li> Meet and greeted by our English-speaking tour guide </li>
+                <li> Transfer to Siem Reap province</li>
+                <li> Upon arrival, transfer to the hotel </li>
+
               </ul>
               <div class="day-details">
                 <span class="accommodation"><i class="bi bi-building"></i> Hotel in Siem Reap</span>
-                <span class="meals"><i class="bi bi-cup-hot"></i> -</span>
+                <span class="meals"><i class="bi bi-cup-hot"></i> - </span>
               </div>
             </div>
           </div>
@@ -113,23 +120,23 @@ include '../partials/__subhero.php';
           <div class="itinerary-item">
             <div class="day-number">Day 2</div>
             <div class="day-content">
-              <h4>Siem Reap – Angkor Wat – Small Circuit</h4>
+              <h4>Angkor Small Circuit Tour</h4>
               <ul>
-                <li>Enjoy breakfast at the hotel</li>
-                <li>Go to visit the South Gate of Angkor Thom, or Tonle Om Gate is one of the five ancient gate and is a very famous spot within Angkor Archaeological Park. Angkor Thom is the last capital of the Khmer Empire was fortified city built by king Jayavarman VII in the late 12th century. Next, visit Bayon temple is a richly decorated Khmer temple related to Buddhism, built in the late 12th or early 13th century as a state temple of the king Jayavarman VII.</li>
-                <li>The northwest of Bayon is called Baphuon which is a Hindu temple built before Angkor Wat in the mid-11th century.</li>
-                <li>Visit Phimeanakas is a Pyramid Hindu temple built at the end of 10th century and located inside the enclosure of the Royal Palace of Angkor Thom.</li>
-                <li>Visit the Terrace of the Elephants is a part of the walled city of Angkor Thom. It was used by Angkor's king Jayavarman VII as a platform to view his victorious returning army. And then visit the terrace of the Leper King is just the north of the Terrace of the Elephants. It was built in the Bayon style under Jayavaraman VII.</li>
-                <li>Enjoy lunch at a local restaurant</li>
-                <li>Continue to visit the magnificent Angkor Wat temple is a temple complex in Cambodia and the largest religious monument in the world, which built in the early 12th century by king Suryavarman II as a Hindu temple dedicated to the god Vishnu for the Khmer Empire and it gradually transformed into a Buddhist temple.</li>
-                <li>Visit the fabulous Ta Prohm temple, which embraced by the roots of enormous fig trees. It is more famous for being the location in the film Lora Croft: Tomb Raider, played by Angelina Jolie. Bayon was built similar in style to the Bayon during the late 12th century.</li>
-                <li>Afterward continue to Phnom Bakheng, climb up the hill for waiting to see a stunning sunset view. Phnom Bakheng is the most popular tourist spot for sunset views of the Angkor Wat temple, which lies amidst the jungle about 1.5km to the southeast</li>
-                <li>Enjoy dinner and then transfer back to the hotel</li> <br>
-                <li><strong>Note:</strong><span style="font-style: italic;color:#eb8900;"> Due to the limited number of tourists allowed at Phnom Bakheng during peak times, we require you to start climbing a bit earlier. Please be prepared for a longer wait to watch the sunset, which can take around 1 hour 45 minutes to 2 hours.</span></li>
+                <li> Enjoy breakfast at the hotel</li>
+                <li> Go to visit the South Gate of Angkor Thom, or Tonle Om Gate is one of the five ancient gate and is a very famous spot within Angkor Archaeological Park. Angkor Thom is the last capital of the Khmer Empire was fortified city built by king Jayavarman VII in the late 12th century. Next, visit Bayon temple is a richly decorated Khmer temple related to Buddhism, built in the late 12th or early 13th century as a state temple of the king Jayavarman VII. </li>
+                <li> The northwest of Bayon is called Baphuon which is a Hindu temple built before Angkor Wat in the mid-11th century.</li>
+                <li> Visit Phimeanakas is a Pyramid Hindu temple built at the end of 10th century and located inside the enclosure of the Royal Palace of Angkor Thom.</li>
+                <li> Visit the Terrace of the Elephants is a part of the walled city of Angkor Thom. It was used by Angkor’s king Jayavarman VII as a platform to view his victorious returning army. And then visit the terrace of the Leper King is just the north of the Terrace of the Elephants. It was built in the Bayon style under Jayavaraman VII.</li>
+                <li> Enjoy lunch at a local restaurant</li>
+                <li> Continue to visit the magnificent Angkor Wat temple is a temple complex in Cambodia and the largest religious monument in the world, which built in the early 12th century by king Suryavarman II as a Hindu temple dedicated to the god Vishnu for the Khmer Empire and it gradually transformed into a Buddhist temple. </li>
+                <li> Visit the fabulous Ta Prohm temple, which embraced by the roots of enormous fig trees. It is more famous for being the location in the film Lora Croft: Tomb Raider, played by Angelina Jolie. Bayon was built similar in style to the Bayon during the late 12th century. </li>
+                <li> Afterward continue to Phnom Bakheng, climb up the hill for waiting to see a stunning sunset view. Phnom Bakheng is the most popular tourist spot for sunset views of the Angkor Wat temple, which lies amidst the jungle about 1.5km to the southeast</li>
+                <li> Enjoy dinner and then transfer back to the hotel</li> <br>
+                <li><strong>Note:</strong><span style="font-style: italic;color:#eb8900;"> Due to the limited number of tourists allowed at Phnom Bakheng during peak times, we require you to start climbing a bit earlier. Please be prepared for a longer wait to watch the sunset, which can take around 1 hour 45 minutes to 2 hours. </span></li>
                 <li><strong>Optional:</strong>
                   <ul>
-                    <li><strong>Shadow Puppet Performance:</strong> Experience the magic of Khmer storytelling through shadow puppetry, using light and leather. It is an ancient art in Cambodia. After the show, you can try your hand at traditional string puppets. Showtime is at 7:00pm</li>
-                    <li><strong>Phare Circus:</strong> Visit Phare Circus it is more than just a circus, the Cambodian circus performers use theater, music, dance and modern circus arts to tell uniquely Cambodian stories, historical, folk and modern. The young circus artists will astonish you with their energy, emotion, enthusiasm and talent, making you have an unforgettable experience. Show time is at 8:00pm</li>
+                    <li><strong>Shadow Puppet Performance:</strong> Experience the magic of Khmer storytelling through shadow puppetry by using light and leather. It is an ancient art in Cambodia. After the show you can try and play with traditional string puppets. Showtime is at 7:00pm </li>
+                    <li><strong> Phare Circus</strong>Visit Phare Circus it is more than just a circus, the Cambodian circus performers use theater, music, dance and modern circus arts to tell uniquely Cambodian stories, historical, folk and modern. The young circus artists will astonish you with their energy, emotion, enthusiasm and talent, making you have an unforgettable experience. Showtime is at 8:00pm </li>
                   </ul>
                 </li>
               </ul>
@@ -143,21 +150,18 @@ include '../partials/__subhero.php';
           <div class="itinerary-item">
             <div class="day-number">Day 3</div>
             <div class="day-content">
-              <h4>Siem Reap – Ek Phnom – Phnom Sampov – Battambang</h4>
+              <h4>Siem Reap – Phnom Penh </h4>
               <ul>
-                <li>Enjoy breakfast at the hotel</li>
-                <li>Depart Siem Reap and head to the northwest of Cambodia is Battambang province, about three hours and takes in some of Cambodia's prettiest landscapes.</li>
-                <li>Upon arrival, visit Ek Phnom ancient temple was built during the reign of King Suryavarman I, who ruled the country in the first part of the 11th century.</li>
-                <li>Enjoy lunch at local restaurant</li>
-                <li>Visit dozens of local families in the village selling dried banana and rice paper. See how the process of slicing up of banana and laying them out to dry on the bamboo skewers and then selling as snacks to all travelers. See how rice paper is produced and how it is used for making famous and delicious spring rolls</li>
-                <li>Proceeding to Phnom Sampov, visit the killing field cave and hear about story of Khmer Rouge (1975-1979) where over 10 thousand victims were killed. Afterward, discover some temples, cannons, monastery, statue and the view from the summit of Sampov mountain.</li>
-                <li>Come down to Sampov foothill and waiting to see millions of bats flying out from the cave during sunset, capturing stunning photos and creating unforgettable memories</li>
-                <li>Enjoy dinner at a local restaurant and then transfer to the hotel in Battambang province</li> <br>
+                <li> Enjoy breakfast at the hotel</li>
+                <li> Visit Kampong Phluk is a floating village and flooded mangrove forest on the Tonle Sap Lake. Many houses and buildings are constructed on the long stilts ranging from 6m to 9m to accommodate the changes in water level between wet and dry seasons. Our boat will go slowly through forest canals, allowing you to catch glimpses of flora and fauna, and see a truly beautiful eco-system</li>
+                <li> Enjoy lunch at a local restaurant</li>
+                <li> Depart for Phnom Penh city</li>
+                <li> Upon arrival, have dinner and then transfer to the hotel at Nagaworld for check in </li> <br>
 
-                <li><strong>Optional:</strong> <span style="color: #eb8900; font-weight: bold;">Phare Ponleu Selpak:</span> Experience with a circus in Battambang province, it is more than just a circus.</li>
+                <li><strong>Optional:</strong> <span style="color: #eb8900; font-weight: bold;">Ox Cart </span><br> Experience an Ox Cart ride at Bakong (30mn) in the villages to see the daily activities of local people, along the way discovering a scenic of rice paddy field, seasonal farming methods and the beauty of the Cambodian countryside. The Ox Cart has been an important feature in Cambodian culture and it has been a transport mode of Khmer people since ancient times. </li>
               </ul>
               <div class="day-details">
-                <span class="accommodation"><i class="bi bi-building"></i> Hotel in Battambang</span>
+                <span class="accommodation"><i class="bi bi-building"></i> Nagaworld Hotel, Phnom Penh</span>
                 <span class="meals"><i class="bi bi-cup-hot"></i> Breakfast, Lunch, Dinner</span>
               </div>
             </div>
@@ -166,22 +170,17 @@ include '../partials/__subhero.php';
           <div class="itinerary-item">
             <div class="day-number">Day 4</div>
             <div class="day-content">
-              <h4>Battambang – Bamboo train – Silk Farm – Siem Reap</h4>
+              <h4>Phnom Penh – Casino </h4>
               <ul>
-                <li>Enjoy breakfast at the hotel</li>
-                <li>Start to city tour, hear the story from tour guide relevant to the culture, religion, agriculture and folk tales of Battambang and see some historical buildings</li>
-                <li>Head to the symbol statue of Battambang province (Ta Dambong Kra Nhoung)</li>
-                <li>Visit Khmer Ancient House made of wood, over 100 years old. The most common traditional houses in Battambang are called Phtas Pet (hip roof) houses, built with wooden frames and roof tiles, measuring about 10.5 meters wide and 29 meters long. Constructed between 1910 and 1920, these houses have lasted nearly a century and remain in excellent condition, showcasing beautiful traditional architecture.</li>
-                <li>Continue to beautiful villages surrounded by rice fields and local life at Ou Srauo Laou, then board the bamboo train. Experience this unique local mode of transport as it takes you through scenic countryside views.</li>
-                <li>Enjoy lunch at a local restaurant</li>
-                <li>Depart to Siem Reap about three hours</li>
-                <li>Stop at the Angkor Silk Farm, located at Pouk District about 16km from Siem Reap. Take the tour to see how silk is both produced and woven into traditional Khmer fabrics. The Angkor Silk Farm also features a large showroom where you can buy high quality silk products were made in the workshops.</li>
-                <li>Transfer to Siem Reap city</li>
-                <li>Enjoy dinner and then transfer to the hotel</li>
+                <li> Have breakfast at the hotel</li>
+                <li> Free time for leisure and enjoy in the Nagaworld casino</li>
+                <li> Enjoy the nightlife of Phnom Penh</li>
+
+                </li>
               </ul>
               <div class="day-details">
-                <span class="accommodation"><i class="bi bi-building"></i> Hotel in Siem Reap</span>
-                <span class="meals"><i class="bi bi-cup-hot"></i> Breakfast, Lunch, Dinner</span>
+                <span class="accommodation"><i class="bi bi-building"></i> Nagaworld Hotel, Phnom Penh</span>
+                <span class="meals"><i class="bi bi-cup-hot"></i> Breakfast</span>
               </div>
             </div>
           </div>
@@ -189,10 +188,10 @@ include '../partials/__subhero.php';
           <div class="itinerary-item">
             <div class="day-number">Day 5</div>
             <div class="day-content">
-              <h4>Hotel – Airport</h4>
+              <h4>Departure</h4>
               <ul>
-                <li>Enjoy breakfast at the hotel</li>
-                <li>Transfer to Siem Reap International Airport and wait for your flight back home</li>
+                <li> Have breakfast at the hotel</li>
+                <li> Transfer to airport and wait for your flight back home</li>
               </ul>
               <div class="day-details">
                 <span class="meals"><i class="bi bi-cup-hot"></i> Breakfast</span>
@@ -209,14 +208,12 @@ include '../partials/__subhero.php';
             <div class="included-section">
               <h3><i class="bi bi-check-circle-fill"></i> What's Included</h3>
               <ul class="inclusion-list included">
-                <li><i class="bi bi-check"></i> Accommodation (3-star and standard hotel), of Double/Twin sharing for 2 adults</li>
-                <li><i class="bi bi-check"></i> A/C car/van/bus with driver</li>
-                <li><i class="bi bi-check"></i> Angkor Pass as mentioned in the itinerary</li>
-                <li><i class="bi bi-check"></i> Ek Phnom entrance ticket</li>
-                <li><i class="bi bi-check"></i> Car at Sampov mountain</li>
-                <li><i class="bi bi-check"></i> Bamboo train</li>
-                <li><i class="bi bi-check"></i> Water and cold towel</li>
-                <li><i class="bi bi-check"></i> English Speaking Tour Guide</li>
+                <li><i class="bi bi-check"></i> Accommodation (3-star and standard hotel), of Double/Twin sharing for 2 adults </li>
+                <li><i class="bi bi-check"></i> A/C car/van/bus with driver </li>
+                <li><i class="bi bi-check"></i> Angkor Pass & entry tickets as per itinerary</li>
+                <li><i class="bi bi-check"></i> Boat trip at Tonle Sap Floating Village</li>
+                <li><i class="bi bi-check"></i> English-speaking tour guide</li>
+                <li><i class="bi bi-check"></i> Complimentary bottled water & cold towels</li>
               </ul>
             </div>
           </div>
@@ -224,14 +221,14 @@ include '../partials/__subhero.php';
             <div class="excluded-section">
               <h3><i class="bi bi-x-circle-fill"></i> What's Not Included</h3>
               <ul class="inclusion-list excluded">
-                <li><i class="bi bi-x"></i> Any airfares, International and Domestic flights</li>
-                <li><i class="bi bi-x"></i> Visa arrangement</li>
-                <li><i class="bi bi-x"></i> Meals (B/L/D)</li>
+                <li><i class="bi bi-x"></i> International & domestic airfares</li>
+                <li><i class="bi bi-x"></i> Cambodia visa & processing</li>
+                <li><i class="bi bi-x"></i> Meals not specified in itinerary (B/L/D)</li>
                 <li><i class="bi bi-x"></i> Travel insurance</li>
-                <li><i class="bi bi-x"></i> Angkor sunrise</li>
-                <li><i class="bi bi-x"></i> Any services other than mentioned and not stated in the itinerary</li>
-                <li><i class="bi bi-x"></i> Any personal expenses such as laundry bills, telephone bills, alcoholic beverages, airport tax, and etc.</li>
-                <li><i class="bi bi-x"></i> Compulsory charge for room single supplement (USD 70)</li>
+                <li><i class="bi bi-x"></i> Angkor sunrise tour</li>
+                <li><i class="bi bi-x"></i> Personal expenses (laundry, phone, etc.)</li>
+                <li><i class="bi bi-x"></i> Single supplement (USD 190)</li>
+                <li><i class="bi bi-x"></i> Optional tours & entertainment</li>
               </ul>
             </div>
           </div>
@@ -240,53 +237,75 @@ include '../partials/__subhero.php';
 
 
       <?php
-            require_once '../config/db.php';
+        require_once '../config/db.php';
 
-            // === Step 1: Get slug from current PHP filename ===
-            // e.g. siem-reap-battambang-angkor-wat-phnom-sampov-bamboo-train-5days.php => siem-reap-battambang-angkor-wat-phnom-sampov-bamboo-train-5days
-            $currentSlug = pathinfo(basename($_SERVER['PHP_SELF']), PATHINFO_FILENAME);
+        // === Step 1: Get slug from current PHP filename ===
+        $currentSlug = pathinfo(basename($_SERVER['PHP_SELF']), PATHINFO_FILENAME);
 
-            // === Step 2: Find tour by matching slug generated from tour_name ===
-            $tour_id = null;
-            $tour_name = '';
+        // === Step 2: Find tour by matching slug from tour_name ===
+        $tour_id = null;
+        $tour_name = '';
+        $base_price = 0;
 
-            $sql = "SELECT id, tour_name FROM package_tours";
-            $res = $mysqli->query($sql);
+        $sql = "SELECT id, tour_name, base_price FROM package_tours";
+        $res = $mysqli->query($sql);
 
-            if ($res) {
-              while ($row = $res->fetch_assoc()) {
-                // Create slug from tour_name (lowercase, replace non-alnum with dash)
-                $slug = strtolower(trim(preg_replace('/[^A-Za-z0-9]+/', '-', $row['tour_name'])));
-                if ($slug === $currentSlug) {
-                  $tour_id = $row['id'];
-                  $tour_name = $row['tour_name'];
-                  break;
-                }
-              }
+        if ($res) {
+          while ($row = $res->fetch_assoc()) {
+            $slug = strtolower(trim(preg_replace('/[^A-Za-z0-9]+/', '-', $row['tour_name'])));
+            if ($slug === $currentSlug) {
+              $tour_id = $row['id'];
+              $tour_name = $row['tour_name'];
+              $base_price = (float)$row['base_price'];
+              break;
             }
+          }
+        }
 
-            if (!$tour_id) {
-              die("Tour not found.");
-            }
+        if (!$tour_id) {
+          die("Tour not found.");
+        }
 
-            // === Step 3: Load group pricing - Real pricing data ===
-            $groupPricing = [
-              '2-3 person' => ['price' => 498, 'min' => 2, 'max' => 3, 'remark' => 'At least 2 adults in this tour'],
-              '4-6 person' => ['price' => 324, 'min' => 4, 'max' => 6, 'remark' => 'At least 4 adults in this tour'],
-              '7-9 person' => ['price' => 275, 'min' => 7, 'max' => 9, 'remark' => 'At least 7 adults in this tour'],
-              '10-14 person' => ['price' => 238, 'min' => 10, 'max' => 14, 'remark' => 'At least 10 adults in this tour'],
-              '15-19 person' => ['price' => 209, 'min' => 15, 'max' => 19, 'remark' => 'At least 15 adults in this tour']
-            ];
+        // === Step 3: Load group size ranges from private_tour_pricing ===
+        $query = "SELECT id, group_size, remark FROM private_tour_pricing ORDER BY id ASC";
+        $result = $mysqli->query($query);
+        if (!$result) {
+          die("Query failed: " . $mysqli->error);
+        }
 
-            $groupLimitsJS = [];
-            foreach ($groupPricing as $group => $data) {
-              $groupLimitsJS[$group] = [
-                'price' => (float)$data['price'],
-                'minAdults' => $data['min'],
-                'maxTotal' => $data['max']
-              ];
-            }
+        $groupLimitsJS = [];
+        $groupOptions = [];
+
+        while ($row = $result->fetch_assoc()) {
+          $group = $row['group_size'];
+          $remark = $row['remark'];
+          $group_id = $row['id'];
+
+          // Parse min-max from group size
+          if (preg_match('/(\d+)\D+(\d+)/', $group, $matches)) {
+            $min = (int)$matches[1];
+            $max = (int)$matches[2];
+          } else {
+            $min = 1;
+            $max = 1;
+          }
+
+          // Populate group settings
+          $groupLimitsJS[$group] = [
+            'price' => $base_price,
+            'minAdults' => $min,
+            'maxTotal' => $max
+          ];
+
+          $groupOptions[] = [
+            'id' => $group_id,
+            'group_size' => $group,
+            'remark' => $remark,
+            'price' => $base_price
+          ];
+        }
       ?>
+
       <section class="pkg-section">
         <h2 class="pkg-title">
           <span class="pkg-title-highlight"></span>Package <span style="color:#2563eb; font-weight: bold;">options</span>
@@ -297,22 +316,22 @@ include '../partials/__subhero.php';
           <h3 class="pkg-heading">Choose Group Size</h3>
           <div class="row g-4 d-flex justify-content-center">
             <?php
-            $id = 1;
-            foreach ($groupPricing as $groupSize => $data):
-              $price = $data['price'];
-              $remark = $data['remark'];
+            // Query again for rendering group options
+            $result = $mysqli->query($query);
+            while ($row = $result->fetch_assoc()):
+              $groupSize = htmlspecialchars($row['group_size']);
+              $price = htmlspecialchars($row['price_per_person']);
+              $remark = htmlspecialchars($row['remark']);
             ?>
               <div class="col-md-4">
                 <div class="pkg-group-option" tabindex="0"
-                  onclick="pkgUI.selectGroup(<?= $id ?>, '<?= $groupSize ?>', <?= $price ?>)">
-                  <h5><?= $groupSize ?></h5>
-                  <p>From <span>USD <?= number_format($price, 0) ?></span> /person</p>
+                  onclick="pkgUI.selectGroup(<?= $row['id'] ?>, '<?= $groupSize ?>', <?= $price ?>)">
+                  <h5><?= $groupSize ?> person<?= $groupSize > 1 ? 's' : '' ?></h5>
+                  <p>From <span>USD <?= number_format($price, 2) ?></span> /person</p>
                   <small><?= $remark ?></small>
                 </div>
               </div>
-            <?php
-              $id++;
-            endforeach; ?>
+            <?php endwhile; ?>
           </div>
         </div>
 
@@ -344,8 +363,8 @@ include '../partials/__subhero.php';
               <!-- Children -->
               <div class="pkg-price-box mb-3">
                 <div>
-                  <p class="fw-semibold mb-0">Child (12+)</p>
-                  <p class="pkg-text-orange">Charged as adult - 100%</p>
+                  <p class="fw-semibold mb-0">Childs (12+)</p>
+                  <p class="pkg-text-orange">Charged as adult</p>
                 </div>
                 <div class="d-flex align-items-center">
                   <span class="me-2 fw-medium">100%</span>
@@ -359,8 +378,8 @@ include '../partials/__subhero.php';
 
               <div class="pkg-price-box mb-3">
                 <div>
-                  <p class="fw-semibold mb-0">Child (5–11) with bed</p>
-                  <p class="pkg-text-orange">75% of adult fare</p>
+                  <p class="fw-semibold mb-0">Childs (5–11) with bed</p>
+                  <p class="pkg-text-orange">75% of adult price</p>
                 </div>
                 <div class="d-flex align-items-center">
                   <span class="me-2 fw-medium">75%</span>
@@ -374,8 +393,8 @@ include '../partials/__subhero.php';
 
               <div class="pkg-price-box mb-3">
                 <div>
-                  <p class="fw-semibold mb-0">Child (5–11) without bed</p>
-                  <p class="pkg-text-orange">50% of adult fare</p>
+                  <p class="fw-semibold mb-0">Childs (5–11) no bed</p>
+                  <p class="pkg-text-orange">50% of adult price</p>
                 </div>
                 <div class="d-flex align-items-center">
                   <span class="me-2 fw-medium">50%</span>
@@ -389,8 +408,8 @@ include '../partials/__subhero.php';
 
               <div class="pkg-price-box mb-3">
                 <div>
-                  <p class="fw-semibold mb-0">Child (under 5)</p>
-                  <p class="pkg-text-orange">Free of charge</p>
+                  <p class="fw-semibold mb-0">Childs (under 5)</p>
+                  <p class="pkg-text-orange">Free</p>
                 </div>
                 <div class="d-flex align-items-center">
                   <span class="me-2 fw-medium">Free</span>
@@ -412,330 +431,330 @@ include '../partials/__subhero.php';
             </div>
 
             <div class="col-md-5 pkg-img-container">
-              <img src="../assets/img/bamboo/bambootrains.jpg" alt="Bamboo Train Battambang" class="img-fluid">
+              <img src="../assets/img/Angkorwat/temple.jpg" alt="Angkor Wat" class="img-fluid">
             </div>
           </div>
         </div>
       </section>
       <script>
-            // Modern Toast Alert Function
-            function showToast(message, type = 'info', duration = 3000) {
-              // Remove existing toast if any
-              const existingToast = document.querySelector('.toast-alert');
-              if (existingToast) {
-                existingToast.remove();
+        // Modern Toast Alert Function
+        function showToast(message, type = 'info', duration = 3000) {
+          // Remove existing toast if any
+          const existingToast = document.querySelector('.toast-alert');
+          if (existingToast) {
+            existingToast.remove();
+          }
+
+          // Create toast element
+          const toast = document.createElement('div');
+          toast.className = `toast-alert toast-${type}`;
+
+          // Set icon based on type
+          let icon = 'ℹ️';
+          if (type === 'warning') icon = '⚠️';
+          if (type === 'error') icon = '❌';
+          if (type === 'success') icon = '✅';
+          if (type === 'info') icon = 'ℹ️';
+
+          toast.innerHTML = `
+            <div class="toast-content">
+              <span class="toast-icon">${icon}</span>
+              <span class="toast-message">${message}</span>
+            </div>
+          `;
+
+          // Add to body
+          document.body.appendChild(toast);
+
+          // Show toast with animation
+          setTimeout(() => {
+            toast.classList.add('toast-show');
+          }, 100);
+
+          // Auto hide after duration
+          setTimeout(() => {
+            toast.classList.remove('toast-show');
+            setTimeout(() => {
+              if (toast.parentNode) {
+                toast.remove();
               }
+            }, 300);
+          }, duration);
+        }
 
-              // Create toast element
-              const toast = document.createElement('div');
-              toast.className = `toast-alert toast-${type}`;
+        // Popup Alert Functions (keep existing)
+        function showPopupAlert(message, type = 'warning', title = null) {
+          const popup = document.getElementById('popupAlert');
+          const icon = document.getElementById('popupAlertIcon');
+          const titleEl = document.getElementById('popupAlertTitle');
+          const messageEl = document.getElementById('popupAlertMessage');
+          const button = document.getElementById('popupAlertButton');
 
-              // Set icon based on type
-              let icon = 'ℹ️';
-              if (type === 'warning') icon = '⚠️';
-              if (type === 'error') icon = '❌';
-              if (type === 'success') icon = '✅';
-              if (type === 'info') icon = 'ℹ️';
+          // Set content
+          messageEl.textContent = message;
 
-              toast.innerHTML = `
-                <div class="toast-content">
-                  <span class="toast-icon">${icon}</span>
-                  <span class="toast-message">${message}</span>
-                </div>
-              `;
+          // Set type-specific styling
+          if (type === 'error') {
+            icon.textContent = '❌';
+            icon.className = 'popup-alert-icon error';
+            titleEl.textContent = title || 'Error';
+            button.className = 'popup-alert-button error';
+          } else if (type === 'warning') {
+            icon.textContent = '⚠️';
+            icon.className = 'popup-alert-icon warning';
+            titleEl.textContent = title || 'Warning';
+            button.className = 'popup-alert-button warning';
+          } else {
+            icon.textContent = 'ℹ️';
+            icon.className = 'popup-alert-icon';
+            titleEl.textContent = title || 'Information';
+            button.className = 'popup-alert-button';
+          }
 
-              // Add to body
-              document.body.appendChild(toast);
+          popup.style.display = 'flex';
+        }
 
-              // Show toast with animation
-              setTimeout(() => {
-                toast.classList.add('toast-show');
-              }, 100);
+        function closePopupAlert() {
+          document.getElementById('popupAlert').style.display = 'none';
+        }
 
-              // Auto hide after duration
-              setTimeout(() => {
-                toast.classList.remove('toast-show');
-                setTimeout(() => {
-                  if (toast.parentNode) {
-                    toast.remove();
-                  }
-                }, 300);
-              }, duration);
-            }
+        // Close popup when clicking outside
+        document.addEventListener('click', function(event) {
+          const popup = document.getElementById('popupAlert');
+          if (event.target === popup) {
+            closePopupAlert();
+          }
+        });
 
-            // Popup Alert Functions (keep existing)
-            function showPopupAlert(message, type = 'warning', title = null) {
-              const popup = document.getElementById('popupAlert');
-              const icon = document.getElementById('popupAlertIcon');
-              const titleEl = document.getElementById('popupAlertTitle');
-              const messageEl = document.getElementById('popupAlertMessage');
-              const button = document.getElementById('popupAlertButton');
+        const tourInfo = {
+          tour_id: <?= json_encode($tour_id) ?>,
+          tour_name: <?= json_encode($tour_name) ?>
+        };
 
-              // Set content
-              messageEl.textContent = message;
+        const groupLimits = <?= json_encode($groupLimitsJS) ?>;
 
-              // Set type-specific styling
-              if (type === 'error') {
-                icon.textContent = '❌';
-                icon.className = 'popup-alert-icon error';
-                titleEl.textContent = title || 'Error';
-                button.className = 'popup-alert-button error';
-              } else if (type === 'warning') {
-                icon.textContent = '⚠️';
-                icon.className = 'popup-alert-icon warning';
-                titleEl.textContent = title || 'Warning';
-                button.className = 'popup-alert-button warning';
-              } else {
-                icon.textContent = 'ℹ️';
-                icon.className = 'popup-alert-icon';
-                titleEl.textContent = title || 'Information';
-                button.className = 'popup-alert-button';
-              }
+        window.addEventListener('DOMContentLoaded', function() {
+          let currentGroupId = null;
+          let currentGroupKey = null;
 
-              popup.style.display = 'flex';
-            }
+          const getQty = type => parseInt(document.getElementById(`pkg-${type}-qty`).innerText) || 0;
+          const setQty = (type, val) => document.getElementById(`pkg-${type}-qty`).innerText = val;
 
-            function closePopupAlert() {
-              document.getElementById('popupAlert').style.display = 'none';
-            }
+          const totalPeople = () => ['adult', 'child12', 'child75', 'child50', 'child0']
+            .reduce((sum, t) => sum + getQty(t), 0);
 
-            // Close popup when clicking outside
-            document.addEventListener('click', function(event) {
-              const popup = document.getElementById('popupAlert');
-              if (event.target === popup) {
-                closePopupAlert();
-              }
+          const updateButtonStates = () => {
+            if (!currentGroupKey) return;
+            const limits = groupLimits[currentGroupKey];
+            const adult = getQty("adult");
+            const total = totalPeople();
+            const max = limits.maxTotal;
+
+            const disableAdd = (id, condition) =>
+              document.querySelector(`#pkg-${id}-qty`).parentElement.querySelectorAll("button")[1].disabled = condition;
+            const disableSub = (id, condition) =>
+              document.querySelector(`#pkg-${id}-qty`).parentElement.querySelectorAll("button")[0].disabled = condition;
+
+            disableSub("adult", adult <= limits.minAdults);
+            disableAdd("adult", total >= max);
+
+            ["child12", "child75", "child50", "child0"].forEach(type => {
+              const current = getQty(type);
+              disableSub(type, current <= 0);
+              disableAdd(type, total >= max);
             });
+          };
 
-            const tourInfo = {
-              tour_id: <?= json_encode($tour_id) ?>,
-              tour_name: <?= json_encode($tour_name) ?>
+          window.pkgUI = {
+            currentGroupId,
+            currentGroupKey,
+
+            selectGroup(pricingId, groupKey, price) {
+              this.currentGroupId = pricingId;
+              this.currentGroupKey = groupKey;
+              currentGroupId = pricingId;
+              currentGroupKey = groupKey;
+
+              document.getElementById("pkg-group-step").classList.add("pkg-hidden");
+              const form = document.getElementById("pkg-form-step");
+              form.classList.remove("pkg-hidden");
+              form.classList.add("pkg-fade-in");
+
+              const group = groupLimits[groupKey];
+
+              setQty("adult", group.minAdults);
+              ["child12", "child75", "child50", "child0"].forEach(t => setQty(t, 0));
+              document.getElementById("pkg-adult-price-label").innerText = `$${price.toFixed(2)}`;
+
+              this.updateTotal();
+              updateButtonStates();
+            },
+
+            updateQty(type, delta) {
+              if (!this.currentGroupKey) return;
+
+              const limits = groupLimits[this.currentGroupKey];
+              const max = limits.maxTotal;
+              const minAdults = limits.minAdults;
+              const currentQty = getQty(type);
+              const total = totalPeople();
+              const newTotal = total + delta;
+
+              // Check if trying to add more when at max limit
+              if (delta > 0 && total >= max) {
+                showToast(`Maximum ${max} people allowed for this group size`, 'warning', 4000);
+                return;
+              }
+
+              if (type === "adult") {
+                const newVal = currentQty + delta;
+
+                // Check if trying to reduce below minimum adults
+                if (delta < 0 && newVal < minAdults) {
+                  showToast(`Minimum ${minAdults} adults required for this group size`, 'warning', 4000);
+                  return;
+                }
+
+                if (newVal < minAdults || newTotal > max || newVal < 0) return;
+                setQty(type, newVal);
+              } else {
+                const newVal = currentQty + delta;
+                if (newVal < 0 || newTotal > max) return;
+                setQty(type, newVal);
+              }
+
+              this.updateTotal();
+              updateButtonStates();
+            },
+
+            updateTotal() {
+              if (!this.currentGroupKey) return;
+
+              const group = groupLimits[this.currentGroupKey];
+              const base = group.price;
+
+              const adult = getQty("adult");
+              const c12 = getQty("child12");
+              const c75 = getQty("child75");
+              const c50 = getQty("child50");
+
+              const total =
+                (adult + c12) * base +
+                c75 * base * 0.75 +
+                c50 * base * 0.5;
+
+              document.getElementById("pkg-total-price").innerText = total.toFixed(2);
+            }
+          };
+
+          function showAddToCartPopup() {
+            const popup = document.getElementById('addToCartSuccessPopup');
+            if (!popup) return;
+            popup.style.display = 'block';
+            setTimeout(() => {
+              popup.style.display = 'none';
+            }, 3000);
+          }
+
+          function saveBookingData(postData) {
+            // Store booking data including tour_id
+            localStorage.setItem('bookingData', JSON.stringify(postData));
+          }
+
+          // Add to Cart button
+          document.getElementById('addToCartBtn').addEventListener('click', async function() {
+            if (!pkgUI.currentGroupId || !pkgUI.currentGroupKey) {
+              showPopupAlert('Please select a group size first.', 'warning', 'Selection Required');
+              return;
+            }
+
+            const tourDate = document.getElementById('pkg-tour-date').value;
+            if (!tourDate) {
+              showPopupAlert('Please select a tour date.', 'warning', 'Date Required');
+              return;
+            }
+
+            const adults = getQty('adult');
+            const child12 = getQty('child12');
+            const child75 = getQty('child75');
+            const child50 = getQty('child50');
+            const child0 = getQty('child0');
+            const totalPrice = parseFloat(document.getElementById('pkg-total-price').innerText) || 0;
+
+            const postData = {
+              group_id: pkgUI.currentGroupId,
+              group_key: pkgUI.currentGroupKey,
+              tour_date: tourDate,
+              adults: adults,
+              child12: child12,
+              child75: child75,
+              child50: child50,
+              child0: child0,
+              total_price: totalPrice,
+              image: '../assets/img/Angkorwat/temple.jpg',
+              tour_id: tourInfo.tour_id // store tour_id here
             };
 
-            const groupLimits = <?= json_encode($groupLimitsJS) ?>;
+            saveBookingData(postData);
 
-            window.addEventListener('DOMContentLoaded', function() {
-              let currentGroupId = null;
-              let currentGroupKey = null;
-
-              const getQty = type => parseInt(document.getElementById(`pkg-${type}-qty`).innerText) || 0;
-              const setQty = (type, val) => document.getElementById(`pkg-${type}-qty`).innerText = val;
-
-              const totalPeople = () => ['adult', 'child12', 'child75', 'child50', 'child0']
-                .reduce((sum, t) => sum + getQty(t), 0);
-
-              const updateButtonStates = () => {
-                if (!currentGroupKey) return;
-                const limits = groupLimits[currentGroupKey];
-                const adult = getQty("adult");
-                const total = totalPeople();
-                const max = limits.maxTotal;
-
-                const disableAdd = (id, condition) =>
-                  document.querySelector(`#pkg-${id}-qty`).parentElement.querySelectorAll("button")[1].disabled = condition;
-                const disableSub = (id, condition) =>
-                  document.querySelector(`#pkg-${id}-qty`).parentElement.querySelectorAll("button")[0].disabled = condition;
-
-                disableSub("adult", adult <= limits.minAdults);
-                disableAdd("adult", total >= max);
-
-                ["child12", "child75", "child50", "child0"].forEach(type => {
-                  const current = getQty(type);
-                  disableSub(type, current <= 0);
-                  disableAdd(type, total >= max);
-                });
-              };
-
-              window.pkgUI = {
-                currentGroupId,
-                currentGroupKey,
-
-                selectGroup(pricingId, groupKey, price) {
-                  this.currentGroupId = pricingId;
-                  this.currentGroupKey = groupKey;
-                  currentGroupId = pricingId;
-                  currentGroupKey = groupKey;
-
-                  document.getElementById("pkg-group-step").classList.add("pkg-hidden");
-                  const form = document.getElementById("pkg-form-step");
-                  form.classList.remove("pkg-hidden");
-                  form.classList.add("pkg-fade-in");
-
-                  const group = groupLimits[groupKey];
-
-                  setQty("adult", group.minAdults);
-                  ["child12", "child75", "child50", "child0"].forEach(t => setQty(t, 0));
-                  document.getElementById("pkg-adult-price-label").innerText = `$${price.toFixed(0)}`;
-
-                  this.updateTotal();
-                  updateButtonStates();
+            try {
+              const response = await fetch('add-to-cart.php', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json'
                 },
-
-                updateQty(type, delta) {
-                  if (!this.currentGroupKey) return;
-
-                  const limits = groupLimits[this.currentGroupKey];
-                  const max = limits.maxTotal;
-                  const minAdults = limits.minAdults;
-                  const currentQty = getQty(type);
-                  const total = totalPeople();
-                  const newTotal = total + delta;
-
-                  // Check if trying to add more when at max limit
-                  if (delta > 0 && total >= max) {
-                    showToast(`Maximum ${max} people allowed for this group size`, 'warning', 4000);
-                    return;
-                  }
-
-                  if (type === "adult") {
-                    const newVal = currentQty + delta;
-
-                    // Check if trying to reduce below minimum adults
-                    if (delta < 0 && newVal < minAdults) {
-                      showToast(`Minimum ${minAdults} adults required for this group size`, 'warning', 4000);
-                      return;
-                    }
-
-                    if (newVal < minAdults || newTotal > max || newVal < 0) return;
-                    setQty(type, newVal);
-                  } else {
-                    const newVal = currentQty + delta;
-                    if (newVal < 0 || newTotal > max) return;
-                    setQty(type, newVal);
-                  }
-
-                  this.updateTotal();
-                  updateButtonStates();
-                },
-
-                updateTotal() {
-                  if (!this.currentGroupKey) return;
-
-                  const group = groupLimits[this.currentGroupKey];
-                  const base = group.price;
-
-                  const adult = getQty("adult");
-                  const c12 = getQty("child12");
-                  const c75 = getQty("child75");
-                  const c50 = getQty("child50");
-
-                  const total =
-                    (adult + c12) * base +
-                    c75 * base * 0.75 +
-                    c50 * base * 0.5;
-
-                  document.getElementById("pkg-total-price").innerText = total.toFixed(0);
-                }
-              };
-
-              function showAddToCartPopup() {
-                const popup = document.getElementById('addToCartSuccessPopup');
-                if (!popup) return;
-                popup.style.display = 'block';
-                setTimeout(() => {
-                  popup.style.display = 'none';
-                }, 3000);
-              }
-
-              function saveBookingData(postData) {
-                // Store booking data including tour_id
-                localStorage.setItem('bookingData', JSON.stringify(postData));
-              }
-
-              // Add to Cart button
-              document.getElementById('addToCartBtn').addEventListener('click', async function() {
-                if (!pkgUI.currentGroupId || !pkgUI.currentGroupKey) {
-                  showPopupAlert('Please select a group size first.', 'warning', 'Selection Required');
-                  return;
-                }
-
-                const tourDate = document.getElementById('pkg-tour-date').value;
-                if (!tourDate) {
-                  showPopupAlert('Please select a tour date.', 'warning', 'Date Required');
-                  return;
-                }
-
-                const adults = getQty('adult');
-                const child12 = getQty('child12');
-                const child75 = getQty('child75');
-                const child50 = getQty('child50');
-                const child0 = getQty('child0');
-                const totalPrice = parseFloat(document.getElementById('pkg-total-price').innerText) || 0;
-
-                const postData = {
-                  group_id: pkgUI.currentGroupId,
-                  group_key: pkgUI.currentGroupKey,
-                  tour_date: tourDate,
-                  adults: adults,
-                  child12: child12,
-                  child75: child75,
-                  child50: child50,
-                  child0: child0,
-                  total_price: totalPrice,
-                  image: '../assets/img/battambang/bamboo-train.jpg',
-                  tour_id: tourInfo.tour_id // store tour_id here
-                };
-
-                saveBookingData(postData);
-
-                try {
-                  const response = await fetch('add-to-cart.php', {
-                    method: 'POST',
-                    headers: {
-                      'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(postData),
-                  });
-
-                  const data = await response.json();
-
-                  if (data.status === 'success') {
-                    showAddToCartPopup();
-                  } else {
-                    showPopupAlert('Error adding to cart: ' + (data.message || 'Unknown error'), 'error', 'Cart Error');
-                  }
-                } catch (error) {
-                  console.error('Add to cart error:', error);
-                  showPopupAlert('Failed to add to cart. Please try again.', 'error', 'Network Error');
-                }
+                body: JSON.stringify(postData),
               });
 
-              // Book Now button
-              document.getElementById('bookNowBtn').addEventListener('click', function() {
-                if (!pkgUI.currentGroupId || !pkgUI.currentGroupKey) {
-                  showPopupAlert('Please select a group size first.', 'warning', 'Selection Required');
-                  return;
-                }
+              const data = await response.json();
 
-                const tourDate = document.getElementById('pkg-tour-date').value;
-                if (!tourDate) {
-                  showPopupAlert('Please select a tour date.', 'warning', 'Date Required');
-                  return;
-                }
+              if (data.status === 'success') {
+                showAddToCartPopup();
+              } else {
+                showPopupAlert('Error adding to cart: ' + (data.message || 'Unknown error'), 'error', 'Cart Error');
+              }
+            } catch (error) {
+              console.error('Add to cart error:', error);
+              showPopupAlert('Failed to add to cart. Please try again.', 'error', 'Network Error');
+            }
+          });
 
-                const postData = {
-                  group_id: pkgUI.currentGroupId,
-                  group_key: pkgUI.currentGroupKey,
-                  tour_date: tourDate,
-                  adults: getQty('adult'),
-                  child12: getQty('child12'),
-                  child75: getQty('child75'),
-                  child50: getQty('child50'),
-                  child0: getQty('child0'),
-                  total_price: parseFloat(document.getElementById('pkg-total-price').innerText),
-                  image: '../assets/img/battambang/bamboo-train.jpg',
-                  tour_id: tourInfo.tour_id // store tour_id here too
-                };
+          // Book Now button
+          document.getElementById('bookNowBtn').addEventListener('click', function() {
+            if (!pkgUI.currentGroupId || !pkgUI.currentGroupKey) {
+              showPopupAlert('Please select a group size first.', 'warning', 'Selection Required');
+              return;
+            }
 
-                saveBookingData(postData);
+            const tourDate = document.getElementById('pkg-tour-date').value;
+            if (!tourDate) {
+              showPopupAlert('Please select a tour date.', 'warning', 'Date Required');
+              return;
+            }
 
-                // Set flag for next booking page if needed
-                localStorage.setItem('nextBookingPage', 'package');
+            const postData = {
+              group_id: pkgUI.currentGroupId,
+              group_key: pkgUI.currentGroupKey,
+              tour_date: tourDate,
+              adults: getQty('adult'),
+              child12: getQty('child12'),
+              child75: getQty('child75'),
+              child50: getQty('child50'),
+              child0: getQty('child0'),
+              total_price: parseFloat(document.getElementById('pkg-total-price').innerText),
+              image: '../assets/img/Angkorwat/temple.jpg',
+              tour_id: tourInfo.tour_id // store tour_id here too
+            };
 
-                // Redirect to signup or next step
-                window.location.href = 'signup.php';
-              });
-            });
+            saveBookingData(postData);
+
+            // Set flag for next booking page if needed
+            localStorage.setItem('nextBookingPage', 'package');
+
+            // Redirect to signup or next step
+            window.location.href = 'signup.php';
+          });
+        });
       </script>
 
 
@@ -744,33 +763,44 @@ include '../partials/__subhero.php';
         <h2>Photo Gallery</h2>
         <div class="gallery-grid">
           <div class="gallery-item">
-            <a href="../assets/img/travel/destination-1.webp" class="glightbox">
-              <img src="../assets/img/travel/destination-1.webp" alt="Venice Canals" class="img-fluid" loading="lazy">
+            <a href="../assets/img/Angkorwat/couple.webp" class="glightbox">
+              <img src="../assets/img/Angkorwat/couple.webp" alt="Venice Canals" class="img-fluid" loading="lazy">
             </a>
           </div>
           <div class="gallery-item">
-            <a href="../assets/img/travel/destination-2.webp" class="glightbox">
-              <img src="../assets/img/travel/destination-2.webp" alt="Florence Cathedral" class="img-fluid" loading="lazy">
+            <a href="../assets/img/Bayon Temple,/ancient-khmer-architecture-amazing-view-bayon-temple-sunset-angkor-wat-complex_558469-4830.avif" class="glightbox">
+              <img src="../assets/img/Bayon Temple,/ancient-khmer-architecture-amazing-view-bayon-temple-sunset-angkor-wat-complex_558469-4830.avif" alt="Florence Cathedral" class="img-fluid" loading="lazy">
             </a>
           </div>
           <div class="gallery-item">
-            <a href="../assets/img/travel/destination-3.webp" class="glightbox">
-              <img src="../assets/img/travel/destination-3.webp" alt="Roman Colosseum" class="img-fluid" loading="lazy">
+            <a href="../assets/img//Angkorwat/phimeanahkas.jpg" class="glightbox">
+              <img src="../assets/img/Angkorwat/phimeanahkas.jpg" alt="Roman Colosseum" class="img-fluid" loading="lazy">
             </a>
           </div>
           <div class="gallery-item">
-            <a href="../assets/img/travel/destination-4.webp" class="glightbox">
-              <img src="../assets/img/travel/destination-4.webp" alt="Santorini Sunset" class="img-fluid" loading="lazy">
+            <a href="../assets/img/Angkorwat/Terrace of the elephant.jpg" class="glightbox">
+              <img src="../assets/img/Angkorwat/Terrace of the elephant.jpg" alt="Santorini Sunset" class="img-fluid" loading="lazy">
             </a>
           </div>
           <div class="gallery-item">
-            <a href="../assets/img/travel/destination-5.webp" class="glightbox">
-              <img src="../assets/img/travel/destination-5.webp" alt="Hagia Sophia" class="img-fluid" loading="lazy">
+            <a href="../assets/img/phnom-bakheng/5caac579a6cd7c1974870ddd12a0bc55.jpg" class="glightbox">
+              <img src="../assets/img/phnom-bakheng/5caac579a6cd7c1974870ddd12a0bc55.jpg" alt="Hagia Sophia" class="img-fluid" loading="lazy">
             </a>
           </div>
           <div class="gallery-item">
-            <a href="../assets/img/travel/destination-6.webp" class="glightbox">
-              <img src="../assets/img/travel/destination-6.webp" alt="Mediterranean Cuisine" class="img-fluid" loading="lazy">
+            <a href="../assets/img/phnom-bakheng/8a47b28bb47b8e54e24aa6f30f27e181.jpg" class="glightbox">
+              <img src="../assets/img/phnom-bakheng/8a47b28bb47b8e54e24aa6f30f27e181.jpg" alt="Mediterranean Cuisine" class="img-fluid" loading="lazy">
+            </a>
+          </div>
+
+          <div class="gallery-item">
+            <a href="../assets/img/floating village/Kampng Phluk.jpg" class="glightbox">
+              <img src="../assets/img/floating village/Kampng Phluk.jpg" alt="Mediterranean Cuisine" class="img-fluid" loading="lazy">
+            </a>
+          </div>
+          <div class="gallery-item">
+            <a href="../assets/img/floating village/309213_67f748f24639c.jpg" class="glightbox">
+              <img src="../assets/img/floating village/309213_67f748f24639c.jpg" alt="Mediterranean Cuisine" class="img-fluid" loading="lazy">
             </a>
           </div>
         </div>
@@ -782,13 +812,13 @@ include '../partials/__subhero.php';
           <h2>Ready for Your Mediterranean Adventure?</h2>
           <p>Limited spots available for 2024 departures. Book now to secure your place on this incredible journey.</p>
           <div class="cta-actions">
-            <a href="../booking.php" class="btn-primary">Book Now</a>
-            <a href="tel:+1-555-123-4567" class="btn-secondary">Call Us: +1 (555) 123-4567</a>
+            <a href="#" class="btn-primary">Book Now</a>
+            <a href="tel:+1-555-123-4567" class="btn-secondary">Call Us: (+855) 97 559 0178</a>
           </div>
-          <div class="urgency-banner">
+          <!-- <div class="urgency-banner">
             <i class="bi bi-clock"></i>
             <span>Next departure in 45 days - Only 6 spots remaining!</span>
-          </div>
+          </div> -->
         </div>
       </div>
 
